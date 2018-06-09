@@ -1,0 +1,9 @@
+mysql:
+  image: mysql:5.6.26
+  environment:
+   - MYSQL_ROOT_PASSWORD=root
+   - MYSQL_DATABASE=auth
+   - MYSQL_USER=auth
+   - MYSQL_PASSWORD=auth
+  ports:
+    - "3306:3306"

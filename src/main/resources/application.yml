@@ -1,0 +1,32 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /auth
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/auth
+    username: auth
+    password: auth
+    platform: mysql
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialec: org.hibernate.dialect.MySQL5Dialect
+  security:
+    user:
+      password: startup
+      name: startup
+
+security:
+  oauth2:
+    client:
+      id: startup
+      client-secret: startup
+      authorized-grant-types:
+        - authorization_code
+        - refresh_token
+        - password
+        - client_credentials
